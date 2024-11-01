@@ -29,6 +29,10 @@ FROM manager
 WHERE manager_name = 'Akshay'
 GROUP BY manager_name;
 
+SELECT manager_name, COUNT(empid) AS employee_count
+FROM manager
+GROUP BY manager_name;
+
 SELECT manager.manager_name, employee.empid, employee.fname, employee.lname
 FROM manager
 JOIN employee ON manager.empid = employee.empid
